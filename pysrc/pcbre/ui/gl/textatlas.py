@@ -142,7 +142,7 @@ def distance_transform_bitmap(input, margin):
 
     # Resample down to the low res version
     rescaled = scipy.ndimage.interpolation.zoom(inside, 1./PRESCALE, order=1)
-    rescaled = rescaled[:old_h, :old_w]
+    rescaled = rescaled[:int(old_h), :int(old_w)]
 
     # And transfer back to a uint8
     # All in-place ops to prevent reallocations
@@ -301,7 +301,7 @@ class SDFTextAtlas(object):
             x1 += 2 * self.margin
             y1 += 2 * self.margin
 
-            self.image[y0:y1, x0:x1] = distance_transform_bitmap(bitmap, self.margin)
+            self.image[int(y0):int(y1), int(x0):int(x1)] = distance_transform_bitmap(bitmap, self.margin)
 
 
             ae.updatePos(self.packer.width, self.packer.height, x0 , y0, x1, y1)

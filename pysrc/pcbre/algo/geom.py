@@ -4,7 +4,6 @@ from pcbre.model.artwork_geom import Trace, Via, Polygon
 from pcbre.model.const import IntersectionClass
 from pcbre.model.pad import Pad
 from shapely.geometry import Point as ShapelyPoint
-
 __author__ = 'davidc'
 
 
