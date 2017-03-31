@@ -61,24 +61,17 @@ Install the following packages using apt:
 
 - python3
 - python3-pip
-- python3-numpy
-- python3-scipy
-- python3-pyside
-- libspatialindex-dev
+ libspatialindex-dev
 - libgeos-dev
 - libpotrace-dev
 - libagg-dev
 - libfreetype6-dev
-- cython3
 
-If you are running tests, also install:
-
-- python3-mock
 
 The following libraries may have issues when installed using the package manager, but are still required:
 
 - libcapnp-dev (outdated, you need 0.5.2, just make install if your distro lacks this version)
-- libopencv-dev (outdated, you need 3.0.0 with BUILD_NEW_PYTHON_SUPPORT -- follow the instructions [here](http://rodrigoberriel.com/2014/10/installing-opencv-3-0-0-on-ubuntu-14-04/), but make sure to use the [release version of OpenCV 3.0](http://opencv.org/downloads.html).)
+- libopencv-dev (outdated, you need > 3.0.0 -- follow the instructions [here](http://rodrigoberriel.com/2014/10/installing-opencv-3-0-0-on-ubuntu-14-04/), but make sure to use the [release version of OpenCV 3.0](http://opencv.org/downloads.html).)
 
 Install the packages listed above in Python Packages using pip (except for mock, which you should have already installed if you need it), and you should be good to go with prerequisites.
 
